@@ -652,7 +652,7 @@ When TIMES isn't nil, delete only TIMES links."
   (save-excursion
     (goto-char beg)
     (while (and (>= (cl-decf times) 0)
-                (re-search-forward "\\[\\[file:\\([^]]*\\)\\]\\]" end t))
+                (re-search-forward "\\[\\[download:\\([^]]*\\)\\]\\]" end t))
       (let ((str (match-string-no-properties 1)))
         (delete-region beg
                        (match-end 0))
